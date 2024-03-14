@@ -1,0 +1,176 @@
+.team {
+    &__wrap {
+        margin-bottom: 150px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 97px;
+        margin-top: 0;
+        position: relative;
+        text-transform: uppercase;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 6%;
+            height: 4px;
+            background-color: #59253e;
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__cards {
+        background-color: $primary-text-color;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__cards-title {
+        text-transform:uppercase;
+        color: $dark-color;
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 21px;
+        margin-left: 12px;
+        margin-bottom: 0;
+        line-height: .8rem;
+    }
+
+    &__subtitle {
+        color: $second-bg-color;
+        margin-top: 0;
+        margin-bottom:10px;
+        margin-left: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(13, 13, 13, 0.36);
+        margin: 0 12px 57px 12px;
+    }
+
+    &__btn {
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-accent-color;
+        color: $primary-text-color;
+        padding: 10px;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.25);
+        float: right;
+        margin-bottom: 12px;
+        margin-right: 12px;
+        
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        
+        &:hover {
+            color: $primary-accent-color;
+            background-color: $primary-text-color;
+        }
+    }
+
+    .visible-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+     .team .visible-btn {
+        display: block;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-accent-color;
+        color: $primary-text-color;
+        padding: 10px;
+        margin: 20px auto 0 auto;
+        float: none;
+        
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        
+        &:hover {
+            color: $primary-accent-color;
+            background-color: $primary-text-color;
+        }
+    }
+
+    .team {
+        &__wrap {
+            margin-bottom: 50px;
+        }
+
+        &__title {
+            width: 134px;
+            margin: 0 auto 36px auto;
+            font-size: 26px;
+
+            &:after {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 65px 10px;
+            max-width: 324px;
+            margin: auto;
+        }
+
+        &__cards {
+        background-color: transparent;
+        box-shadow: none;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        &__img {
+            height: 157px;
+            border-radius: 20px;
+        }
+
+        &__cards-title {
+            color: $primary-text-color;
+            margin-left:0;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            display: none;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}

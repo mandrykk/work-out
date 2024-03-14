@@ -1,0 +1,182 @@
+.training {
+    &__wrap {
+        margin-bottom: 150px;
+    }
+
+    &__titles {
+        text-transform: uppercase;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 52px;
+        position: relative;
+            
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 27%;
+            height: 4px;
+            background-color: $second-accent-color;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    &__link {
+        cursor: pointer;
+        color: $primary-text-color;
+        &:hover {
+            color: $primary-accent-color;
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__cards {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__cards-title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+
+    &__cards-text {
+        margin-top: 0;
+        margin-bottom: 19px;
+        font-weight: 400;
+        font-size: 14px;
+        color:rgba(255, 255, 255, 0.36);
+    }
+
+    &__btns {
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-accent-color;
+        color: $primary-text-color;
+        padding: 10px;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+
+        &:hover {
+            color: $primary-accent-color;
+            background-color: $primary-text-color;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .training {
+        &__wrap {
+            margin-bottom: 50px;
+        }
+
+        &__titles {
+            display: block;
+            text-align: center;
+        }
+
+        &__title {
+            width: 224px;
+            margin-top: 0;
+            margin-bottom: 45px;
+            margin: auto;
+            font-size: 26px;
+
+            &:after {
+             width: 100%;
+            }
+        }
+
+        &__link {
+            display: none;
+        }
+
+        &__content {
+            display: block;
+            margin-top: 45px;
+        }
+
+        &__cards {
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        &__cards img {
+            width: 100%;
+            border-radius: 10px;
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+        }
+        
+        &__cards-text {
+            display: none;
+        }
+
+        &__btns {
+            display: none;
+        }
+
+    }
+
+    .first-card{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+
+    .second-card{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+
+    .third-card{
+        position: absolute;
+        bottom: 55px;
+        left: 20px;
+    }
+
+    .visible-btn {
+        display: block;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-accent-color;
+        color: $primary-text-color;
+        padding: 10px;
+        margin: auto;
+        
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        
+        &:hover {
+            color: $primary-accent-color;
+            background-color: $primary-text-color;
+        }
+    }
+}
